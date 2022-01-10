@@ -1,4 +1,6 @@
 ---
+setup: |
+  import { Code } from 'astro/components';
 title: 'Introducing Astro: Ship Less JavaScript'
 description: "We're excited to announce Astro as a new way to build static websites and deliver lightning-fast performance without sacrificing a modern developer experience."
 publishDate: 'Tuesday, June 8 2021'
@@ -28,7 +30,9 @@ This post marks the first public beta release of Astro. **Missing features and b
 
 Starting a new project in Astro is easy:
 
-```shell
+<Code code={`const foo = 'bar';`} lang="js" wrap />
+
+```js
 # create your project
 mkdir new-project-directory
 cd new-project-directory
