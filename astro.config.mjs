@@ -8,6 +8,7 @@
 import astroRemark from '@astrojs/markdown-remark';
 
 import rehypePlugin from './rehypePlugin.mjs';
+import { s } from 'hastscript'
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
@@ -25,7 +26,17 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
         remarkPlugins: ['remark-code-titles'],
         rehypePlugins: [
           { default: (await import('rehype-slug')).default },
-          ['rehype-autolink-headings', { behavior: 'prepend' }],
+          ['rehype-autolink-headings', {
+            behavior: 'prepend',
+            content: s(
+              // add SVG using rehype-autolink-headings in mdx.js - https://github.com/remarkjs/remark/discussions/732#discussioncomment-816042
+              // another reference: https://github.com/janosh/svelte-toc/commit/8493df334a11661eddf03434372f6cd71ea313c1
+              `svg`,
+              { width: 16, height: 16, viewBox: `0 0 16 16` },
+              // symbol #link-icon defined in app.html
+              s(`use`, { 'xlink:href': `#link-icon` })
+            ),
+          }],
           ['rehype-toc', { headings: ['h2', 'h3'] }],
           ['rehype-add-classes', { 'h1,h2,h3': 'title' }],
           { default: rehypePlugin },
