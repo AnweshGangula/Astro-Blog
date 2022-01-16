@@ -30,9 +30,9 @@ This post marks the first public beta release of Astro. **Missing features and b
 
 Starting a new project in Astro is easy:
 
-<Code code={`const foo = 'bar';`} lang="js" wrap />
+<Code code={`const foo = 'bar';`} lang="js" wrap /> 
 
-```js
+```js:file-name.js
 # create your project
 mkdir new-project-directory
 cd new-project-directory
