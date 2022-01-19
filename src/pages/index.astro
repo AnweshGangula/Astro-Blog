@@ -28,7 +28,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
     <link rel="stylesheet" href={Astro.resolve('../styles/blog.css')} />
-
+    <link rel="stylesheet" href={Astro.resolve('../styles/prism.css')} />
     <style>
       header {
         width: 100%;

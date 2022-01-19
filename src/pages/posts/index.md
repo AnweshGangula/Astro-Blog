@@ -1,14 +1,14 @@
 ---
 setup: |
-  import Layout from '../../layouts/BlogPost.astro'
   import Cool from '../../components/Author.astro'
   import SvelteComp from '../../components/SvelteCounter.svelte'
-  import * as react from '../../components/ReactCounter.jsx';
+  import * as ReactComp from '../../components/ReactCounter.jsx';
 title: Hello world!
 publishDate: 12 Sep 2021
 name: Nate Moore
 value: 128
 description: Just a Hello World Post!
+layout: '../../layouts/BlogPost.astro'
 ---
 
 <Cool name={frontmatter.name} href="https://twitter.com/n_moore" client:load />
@@ -18,10 +18,10 @@ description: Just a Hello World Post!
 </SvelteComp>
 
 <div>
-  <react.Counter client:visible>
+  <ReactComp.Counter client:visible>
     <h1>Hello React!</h1>
     <p>What's up?</p>
-  </react.Counter>
+  </ReactComp.Counter>
 </div>
 
 This is so cool!

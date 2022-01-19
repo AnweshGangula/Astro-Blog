@@ -1,0 +1,21 @@
+// Reference: https://stackoverflow.com/a/55185885/6908282
+
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sleepdelay",
+      "type": "shell",
+      "command": "ping 127.0.0.1 -n 10 > nul",
+      "group": "none",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated",
+        "revealProblems": "onProblem",
+        "close": true
+      }
+    }
+  ]
+}
