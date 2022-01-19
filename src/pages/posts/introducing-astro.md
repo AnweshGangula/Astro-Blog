@@ -26,13 +26,15 @@ This post marks the first public beta release of Astro. **Missing features and b
 
 > To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides).
 
+https://github.com/snowpackjs/astro#-guides
+
 ## Getting Started
 
 Starting a new project in Astro is easy:
 
 <Code code={`const foo = 'bar';`} lang="js" wrap /> 
 
-```js:file-name.js
+```shell:file.bash
 # create your project
 mkdir new-project-directory
 cd new-project-directory

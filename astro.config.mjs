@@ -23,7 +23,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
       astroRemark,
       {
         // Reference: https://stackblitz.com/edit/github-ajreza-yea7u7?file=astro.config.mjs
-        remarkPlugins: ['remark-code-titles'],
+        remarkPlugins: ['remark-code-titles', 'remark-gfm'],
         rehypePlugins: [
           { default: (await import('rehype-slug')).default },
           ['rehype-autolink-headings', {
